@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active:
+      - dev
+
+# active를 dev로 하면
+# The following 1 profile is active: "dev" 라고 뜸
+# -> 포트 8081에서 뜸
+# active를 port로 하면
+# The following 1 profile is active: "prod" 라고 뜸
+# -> 포트 5000에서 뜸
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8081
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 5000
+
+# ---    <- 전혀 설정파일이 다른 것을 의미함
+# 하나의 yml 파일에 배포, 테스트, 개발 전부 넣을 수 있음
+
+
+
