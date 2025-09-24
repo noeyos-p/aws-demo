@@ -1,11 +1,12 @@
 spring:
   profiles:
     active:
-      - dev
+      - prod
 
 # active를 dev로 하면
 # The following 1 profile is active: "dev" 라고 뜸
 # -> 포트 8081에서 뜸
+
 # active를 port로 하면
 # The following 1 profile is active: "prod" 라고 뜸
 # -> 포트 5000에서 뜸
